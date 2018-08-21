@@ -1,0 +1,21 @@
+<input type="text"
+       [(ngModel)]="servername">
+<button class="btn-servers"
+        [disabled] = "!allowNewServer"
+        (click)="onCreationServer()">Add Server</button>
+
+<p>{{ servername }}</p>
+<!--<p [innerText] = "allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
+
+
+
+
+<input type="text"
+        [(ngModel)]="username"
+        (input)="onUpdateName($event)">
+<p>{{ username }}</p>
+<button (click)="resetB()"
+        [disabled] = "button">check user</button>
