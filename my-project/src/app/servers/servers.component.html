@@ -4,18 +4,43 @@
         [disabled] = "!allowNewServer"
         (click)="onCreationServer()">Add Server</button>
 
-<p>{{ servername }}</p>
+<!--<p>{{ servername }}</p>-->
 <!--<p [innerText] = "allowNewServer"></p>-->
-<p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<!--<p>{{ serverCreationStatus }}</p>-->
+<p *ngIf="serverCreated">Server was created, server name is {{ servername}}</p>
+
+
+<!--<app-server></app-server>-->
+<app-server *ngFor="let server of servers"></app-server>
 
 
 
 
+
+
+<!--task2-->
+<br>
+<hr>
+<p>Task 1</p>
 <input type="text"
         [(ngModel)]="username"
         (input)="onUpdateName($event)">
 <p>{{ username }}</p>
 <button (click)="resetB()"
         [disabled] = "button">check user</button>
+<!--task2-->
+
+
+
+<!--task3-->
+<br>
+<hr>
+<p>Task 2</p>
+<button (click)="onButtonDetails()">Display Ditails</button>
+<p *ngIf="toggleDetails">Secret Password = tuna</p>
+<ul>
+  <li *ngFor="let detail of arrDetails"
+  [ngStyle]="{backgroundColor: styleDetails(detail)}"
+  [ngClass]="{detailColor: detail > 4}">{{ detail }}</li>
+</ul>
+<!--task3-->
