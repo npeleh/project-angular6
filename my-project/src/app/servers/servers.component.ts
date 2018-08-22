@@ -54,7 +54,11 @@ export class ServersComponent implements OnInit {
 
   // task3
   onButtonDetails(){
-    this.toggleDetails = true;
+    if(this.toggleDetails){
+      this.toggleDetails = false;
+    }else{
+      this.toggleDetails = true;
+    }
     this.count = this.count+1;
     this.arrDetails.push(this.count);
   }
