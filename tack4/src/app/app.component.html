@@ -1,0 +1,6 @@
+<app-game-control (selectNum)="getNum($event)" (selectArr)="getArr($event)"></app-game-control>
+<div>{{ num }}</div>
+<ng-container *ngFor="let number of arr">
+  <app-odd *ngIf="number%2 == 1" [arrNumber]="number"></app-odd>
+  <app-even *ngIf="number%2 == 0" [arrNumber]="number"></app-even>
+</ng-container>

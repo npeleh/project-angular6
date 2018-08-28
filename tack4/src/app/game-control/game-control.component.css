@@ -1,0 +1,16 @@
+.start, .stop {
+  width: 80px;
+  margin: 5px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.start {
+  background-color: green;
+}
+
+.stop {
+  background-color: red;
+}
+

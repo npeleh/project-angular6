@@ -1,0 +1,9 @@
+div {
+  width: 60px;
+  height: 40px;
+  margin: 0 60px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 25px;
+  border: 1px dashed black;
+}
