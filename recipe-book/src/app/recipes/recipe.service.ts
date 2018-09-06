@@ -2,6 +2,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {Recipe} from './recipe.model';
 import {Ingredient} from '../shared/ingredient.model';
 import {ShoppingListService} from '../shopping-list/shopping-list.service';
+import {Router} from '@angular/router';
 
 @Injectable()
 export class RecipeService {
@@ -28,16 +29,22 @@ export class RecipeService {
     )
   ];
 
-  constructor(private shoppingListService: ShoppingListService) {
+  constructor(private shoppingListService: ShoppingListService,
+              private router: Router) {
   }
 
   getRecipes() {
     return this.recipes.slice();
   }
 
-  getRecipe(index: number){
-    return this.recipes[index];
+  getRecipe(index: number) {
+    if (isNaN(index) || index > this.recipes.length) {
+      throw new Error('There is no such number');
+    } else {
+      return this.recipes[index];
+    }
   }
+
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
