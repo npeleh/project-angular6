@@ -20,10 +20,7 @@ export class AppComponent {
     this.subscriptions = this.formControl.value.subscriptions;
     this.password = this.formControl.value.password;
 
-    console.log(
-      'Email: ', this.formControl.value.email,
-      ', Subscription: ', this.formControl.value.subscriptions,
-      ', Password: ', this.formControl.value.password);
+    console.log(this.formControl.value);
     this.formControl.reset();
   }
 }

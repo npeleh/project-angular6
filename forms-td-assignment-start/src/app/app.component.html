@@ -13,7 +13,7 @@
            Upon submitting the form, you should simply print the Value of the Form to the Console.
            Optionally, display it in your template.
       -->
-      <form #form="ngForm">
+      <form #form="ngForm" (ngSubmit)="onSubmit()">
           <div>
             <label for="email">Mail address: </label>
               <input
@@ -35,7 +35,6 @@
               class="form-control"
               name="subscriptions"
               [ngModel]="subscriptions"
-              required
             >
               <option value="basic">Basic</option>
               <option value="advanced">Advanced</option>
@@ -55,7 +54,7 @@
               >
             <span *ngIf="!passwordField.valid && passwordField.touched">* Please enter your password!</span>
           </div>
-          <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!form">Submit</button>
+          <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
       </form>
       <div *ngIf="data">
         <h2>Your data: </h2>
