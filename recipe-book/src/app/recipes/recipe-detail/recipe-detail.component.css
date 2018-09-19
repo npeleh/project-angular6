@@ -1,0 +1,20 @@
+.caret {
+  margin-left: 10px;
+}
+.box,h1 {
+  word-wrap: break-word;
+}
+.name {
+  width: 93.8%;
+}
+.amount {
+  width: 6.2%;
+}
+.name,.amount {
+display: inline-block;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+

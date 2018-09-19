@@ -1,0 +1,13 @@
+.name {
+  width: 93.8%;
+}
+.amount {
+  width: 6.2%;
+}
+.name,.amount {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

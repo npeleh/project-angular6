@@ -26,7 +26,20 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       );
   }
 
+  onEditItem(index: number) {
+    this.shoppingListService.startedEdidting.next(index);
+    this.shoppingListService.resetStyle();
+    (<HTMLElement>document.getElementsByClassName('list-group-item')[index]).style.backgroundColor = '#f5f5f5';
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 }
+
+
+// a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+//   color: #555;
+//   text-decoration: none;
+//   background-color: #f5f5f5;
+// }

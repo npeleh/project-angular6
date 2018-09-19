@@ -24,7 +24,6 @@ export class RecipeDetailComponent implements OnInit {
       (params: Params) => {
         try {
           this.id = +params['id'];
-          console.log(this.id);
           this.recipe = this.recipeService.getRecipe(this.id);
         } catch (e) {
           this.recipe = new Recipe('', '', '', Ingredient[0]);
@@ -42,6 +41,10 @@ export class RecipeDetailComponent implements OnInit {
   onEditRecipe() {
     // this.router.navigate(['edit'], {relativeTo: this.route});
     this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
+  }
+  onDeleteRecipe() {
+    this.recipeService.deleteRecipe(this.id);
+    this.router.navigate(['/recipes']);
   }
 
 }

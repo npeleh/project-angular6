@@ -1,0 +1,11 @@
+a.clearfix {
+  margin-bottom: 5px;
+}
+.pull-left {
+  width: 80%;
+  white-space: nowrap;
+}
+p,h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
