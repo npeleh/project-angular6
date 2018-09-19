@@ -4,10 +4,12 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FocusElementDirective } from './focus-element.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FocusElementDirective
   ],
   imports: [
     BrowserModule,

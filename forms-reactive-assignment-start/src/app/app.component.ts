@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
-import {Observable} from "rxjs";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,24 @@ import {Observable} from "rxjs";
 export class AppComponent implements OnInit {
   projectForm: FormGroup;
   statuses = ['Stable', 'Critical', 'Finished'];
+  focus = {
+    name: {
+      state: true,
+      next: 'email'
+    },
+    email: {
+      state: false,
+      next: 'status'
+    },
+    status: {
+      state: false,
+      next: 'button'
+    },
+    button: {
+      state: false,
+      next: null
+    }
+  };
 
 
   ngOnInit() {
@@ -29,20 +47,21 @@ export class AppComponent implements OnInit {
     if (!regExp.test(control.value)) {
       return {'nameIsForbidden': true};
     }
-    if (control.value === 'Test') {
+    if (control.value.toLowerCase() === 'test') {
       return {'nameIsForbidden': true};
     }
     return null;
   }
 
   forbiddenEmail(control: FormControl): Promise<any> | Observable<any> {
-    const regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/igm;
+    const regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z]+\.[a-z]{2,4}$/igm;
     const promise = new Promise<any>((resolve, reject) => {
       setTimeout(() => {
         if (!regEmail.test(control.value)) {
           resolve({'emailIsForbidden': true});
         } else {
           resolve(null);
+
         }
       }, 2000);
     });

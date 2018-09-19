@@ -22,6 +22,8 @@
             id="name"
             class="form-control"
             formControlName="name"
+            maxlength="25"
+            [appFocusElement]="focus"
           >
           <span class="help-block" *ngIf="!projectForm.get('name').valid && projectForm.get('name').touched">* Please enter valid project name!</span>
         </div>
@@ -32,8 +34,12 @@
             id="email"
             class="form-control"
             formControlName="email"
+            maxlength="25"
+            [appFocusElement]="focus"
           >
-          <span *ngIf="!projectForm.get('email').valid && projectForm.get('email').touched">* Please enter valid mail!</span>
+          <span *ngIf="projectForm.get('email').status !== 'PENDING'">
+            <span *ngIf="!projectForm.get('email').valid && projectForm.get('email').touched">* Please enter valid mail!</span>
+          </span>
         </div>
         <div class="form-group">
           <label for="status">Project status: </label>
@@ -41,13 +47,22 @@
             id="status"
             class="form-control"
             formControlName="status"
+            [appFocusElement]="focus"
           >
+
             <option *ngFor="let status of statuses" [value]="status">
               {{status}}
             </option>
           </select>
+
         </div>
-        <button class="btn btn-success" type="submit" [disabled]="!projectForm.valid">Submit</button>
+        <button
+          class="btn btn-success"
+          type="submit"
+          [disabled]="!projectForm.valid"
+          id="button"
+          [appFocusElement]="focus"
+        >Submit</button>
       </form>
     </div>
   </div>
