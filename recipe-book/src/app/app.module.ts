@@ -19,6 +19,9 @@ import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.com
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {RecipeService} from './recipes/recipe.service';
+import {DataStorageService} from './shared/data-storage.service';
+import { ModalComponent } from './modal/modal.component';
+import {ModalService} from './modal.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import {RecipeService} from './recipes/recipe.service';
     RecipesStartComponent,
     RecipeEditComponent,
     PageNotFoundComponent,
-    FocusElementDirective
+    FocusElementDirective,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,7 @@ import {RecipeService} from './recipes/recipe.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService, RecipeService, DataStorageService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

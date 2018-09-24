@@ -17,7 +17,6 @@ export class RecipeService {
       [
         new Ingredient('Bananawwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww', 53435453454),
         new Ingredient('Meat', 1)
-
       ]
     ),
     new Recipe(
@@ -33,6 +32,11 @@ export class RecipeService {
 
   constructor(private shoppingListService: ShoppingListService,
               private router: Router) {
+  }
+
+  setRecipes(recipe: Recipe[]) {
+    this.recipes = recipe;
+    this.recipeChanged.next(this.recipes.slice());
   }
 
   getRecipes() {

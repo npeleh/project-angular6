@@ -1,0 +1,38 @@
+.jw-modal {
+  width: 500px;
+  position: fixed;
+  top: 38.5vh;
+  left: 30.9vw;
+  text-align: center;
+  z-index: 1000;
+  overflow: auto;
+  border-radius: 20px;
+}
+
+.jw-modal-body {
+  padding: 20px;
+  background: #fff;
+  color: #000;
+}
+
+.jw-modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 900;
+}
+
+button {
+  color: #fff;
+  padding: 7px 15px;
+  border: 1px dashed #fff;
+  background: red;
+}
+
+button:focus{
+  outline: none;
+}
