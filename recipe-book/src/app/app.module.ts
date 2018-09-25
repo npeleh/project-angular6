@@ -22,6 +22,10 @@ import {RecipeService} from './recipes/recipe.service';
 import {DataStorageService} from './shared/data-storage.service';
 import { ModalComponent } from './modal/modal.component';
 import {ModalService} from './modal.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import {AuthService} from './auth/auth.service';
+import {AuthGuard} from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,9 @@ import {ModalService} from './modal.service';
     RecipeEditComponent,
     PageNotFoundComponent,
     FocusElementDirective,
-    ModalComponent
+    ModalComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,7 @@ import {ModalService} from './modal.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService, RecipeService, DataStorageService, ModalService],
+  providers: [ShoppingListService, RecipeService, DataStorageService, ModalService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

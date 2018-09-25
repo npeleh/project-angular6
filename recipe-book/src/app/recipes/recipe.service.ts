@@ -11,11 +11,11 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe(
-      'A Test Recipewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww',
-      'This is simply a testwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww',
+      'A Test Recipe',
+      'This is simply a test',
       'https://gracefoods.com/images/Recipes2017/cropped-Pepperpot.jpg',
       [
-        new Ingredient('Bananawwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww', 53435453454),
+        new Ingredient('Banana', 5),
         new Ingredient('Meat', 1)
       ]
     ),

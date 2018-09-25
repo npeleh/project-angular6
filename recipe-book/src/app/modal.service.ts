@@ -1,4 +1,10 @@
+import {Subject} from 'rxjs';
+
 export class ModalService {
+  error = '';
+  show: boolean;
+  delete: boolean;
+  deleteObserver = new Subject();
   private modals: any[] = [];
 
   add(modal: any) {

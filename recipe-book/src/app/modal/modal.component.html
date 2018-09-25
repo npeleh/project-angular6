@@ -1,7 +1,13 @@
 <div class="jw-modal">
   <div class="jw-modal-body">
     <h1>{{errorMassage}}</h1>
-    <button (click)="closeModal('custom-modal-1');">Close</button>
+    <div *ngIf="!showElem">
+      <button (click)="closeModal('custom-modal-1');">Close</button>
+    </div>
+    <div *ngIf="showElem">
+      <button (click)="onDelete(true)">Yes</button>
+      <button (click)="onDelete(false)">No</button>
+    </div>
   </div>
 </div>
 <div class="jw-modal-background" (click)="closeModal('custom-modal-1')"></div>`

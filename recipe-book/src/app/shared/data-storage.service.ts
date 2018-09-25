@@ -6,21 +6,25 @@ import {RecipeService} from '../recipes/recipe.service';
 import {Recipe} from '../recipes/recipe.model';
 import {Observable} from 'rxjs';
 import {ModalService} from '../modal.service';
+import {AuthService} from '../auth/auth.service';
 
 @Injectable()
 export class DataStorageService {
-  error = '';
+
   constructor(private http: Http,
-              private  recipeService: RecipeService,
-              private modalService: ModalService) {
+              private recipeService: RecipeService,
+              private modalService: ModalService,
+              private authService: AuthService) {
   }
 
   storeRecipes() {
-    return this.http.put('https://ng-recipe-book-5aca7.firebaseio.com/recipes.json', this.recipeService.getRecipes());
+    const token = this.authService.getToken();
+    return this.http.put('https://ng-recipe-book-5aca7.firebaseio.com/recipes.json?auth=' + token, this.recipeService.getRecipes());
   }
 
   getRecipes() {
-    return this.http.get('https://ng-recipe-book-5aca7.firebaseio.com/recipes.jso')
+    const token = this.authService.getToken();
+    this.http.get('https://ng-recipe-book-5aca7.firebaseio.com/recipes.json?auth=' + token)
       .map(
         (response: Response) => {
           const recipes: Recipe[] = response.json();
@@ -30,15 +34,17 @@ export class DataStorageService {
               recipe['ingredients'] = [];
             }
           }
-
           return recipes;
         }
         // error handling
       ).catch(
         (error: Response) => {
           if (error.status === 404) {
-            this.error = 'Error 404!';
+            this.modalService.error = 'Error 404!';
+          } else {
+            this.modalService.error = 'Error!';
           }
+          this.modalService.show = false;
           // add component
           this.modalService.open('custom-modal-1');
           return Observable.throw('error massage');

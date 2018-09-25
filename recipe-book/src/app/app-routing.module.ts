@@ -7,6 +7,9 @@ import {RecipesStartComponent} from './recipes/recipes-start/recipes-start.compo
 import {RecipeDetailComponent} from './recipes/recipe-detail/recipe-detail.component';
 import {RecipeEditComponent} from './recipes/recipe-edit/recipe-edit.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {SignupComponent} from './auth/signup/signup.component';
+import {SigninComponent} from './auth/signin/signin.component';
+import {AuthGuard} from './auth/auth-guard.service';
 
 
 const appRoutes: Routes = [
@@ -16,12 +19,14 @@ const appRoutes: Routes = [
     component: RecipesComponent,
     children: [
       {path: '', component: RecipesStartComponent},
-      {path: 'new', component: RecipeEditComponent},
+      {path: 'new', component: RecipeEditComponent, canActivate: [AuthGuard]},
       {path: ':id', component: RecipeDetailComponent},
-      {path: ':id/edit', component: RecipeEditComponent}
+      {path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthGuard]}
     ]
   },
   {path: 'shopping-list', component: ShoppingListComponent},
+  {path: 'signup', component: SignupComponent},
+  {path: 'signin', component: SigninComponent},
   {path: 'page-not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: '/page-not-found'}
 ];

@@ -1,7 +1,5 @@
 import {Component, ElementRef, Input, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {ModalService} from '../modal.service';
-import {DataStorageService} from '../shared/data-storage.service';
-
 
 
 @Component({
@@ -13,13 +11,16 @@ import {DataStorageService} from '../shared/data-storage.service';
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string;
   errorMassage = '';
+  showElem: boolean;
   private element: any;
 
   constructor(private modalService: ModalService,
-              private el: ElementRef,
-              private dataStorageService: DataStorageService) {
+              private el: ElementRef) {
     this.element = el.nativeElement;
+  }
 
+  onDelete(bool) {
+    this.modalService.deleteObserver.next(bool);
   }
 
   closeModal(id: string) {
@@ -59,8 +60,9 @@ export class ModalComponent implements OnInit, OnDestroy {
   open(): void {
     this.element.style.display = 'block';
     document.body.classList.add('jw-modal-open');
-    this.errorMassage = this.dataStorageService.error;
-}
+    this.errorMassage = this.modalService.error;
+    this.showElem = this.modalService.show;
+  }
 
   // close modal
   close(): void {
@@ -69,7 +71,7 @@ export class ModalComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('document:keyup', ['$event']) KeyboardEvent(event: KeyboardEvent) {
-   if (event.keyCode === 27) {
+    if (event.keyCode === 27) {
       this.close();
     }
   }
