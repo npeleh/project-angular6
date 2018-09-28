@@ -8,10 +8,12 @@ import {AuthService} from '../auth.service';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
+  message = '';
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    this.message = this.authService.message;
   }
   onSignin(form: NgForm) {
     const email = form.value.email;

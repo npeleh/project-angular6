@@ -27,5 +27,6 @@ export class ModalService {
     // close modal specified by id
     const modal: any = this.modals.filter(x => x.id === id)[0];
     modal.close();
+    // this.deleteObserver = new Subject();
   }
 }

@@ -26,13 +26,7 @@
   z-index: 900;
 }
 
-button {
-  color: #fff;
-  padding: 7px 15px;
-  border: 1px dashed #fff;
-  background: red;
-}
-
-button:focus{
-  outline: none;
+.btn {
+  margin-right: 5px;
+  margin-bottom: 15px;
 }

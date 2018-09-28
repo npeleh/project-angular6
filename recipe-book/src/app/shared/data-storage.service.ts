@@ -5,7 +5,7 @@ import 'rxjs/Rx';
 import {RecipeService} from '../recipes/recipe.service';
 import {Recipe} from '../recipes/recipe.model';
 import {Observable} from 'rxjs';
-import {ModalService} from '../modal.service';
+import {ModalService} from '../modal/modal.service';
 import {AuthService} from '../auth/auth.service';
 
 @Injectable()

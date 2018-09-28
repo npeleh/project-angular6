@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, OnInit, OnDestroy, HostListener} from '@angular/core';
-import {ModalService} from '../modal.service';
+import {ModalService} from './modal.service';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.element = el.nativeElement;
   }
 
-  onDelete(bool) {
+  onDeleted(bool) {
     this.modalService.deleteObserver.next(bool);
   }
 

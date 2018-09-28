@@ -5,7 +5,8 @@ import {Recipe} from '../recipe.model';
 import {RecipeService} from '../recipe.service';
 import {Ingredient} from '../../shared/ingredient.model';
 import {AuthService} from '../../auth/auth.service';
-import {ModalService} from '../../modal.service';
+import {ModalService} from '../../modal/modal.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -16,6 +17,7 @@ export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
   id: number;
   deleteRecipe: boolean;
+  subscription: Subscription;
 
   constructor(private recipeService: RecipeService,
               private router: Router,
@@ -56,9 +58,10 @@ export class RecipeDetailComponent implements OnInit {
     this.modalService.show = true;
     this.modalService.error = 'A you sure?';
     this.modalService.open('custom-modal-1');
-    this.modalService.deleteObserver
+    this.subscription = this.modalService.deleteObserver
       .subscribe(
         (del: boolean) => {
+          console.log(del);
           if (del) {
             this.recipeService.deleteRecipe(this.id);
             this.router.navigate(['/recipes']);
@@ -66,8 +69,13 @@ export class RecipeDetailComponent implements OnInit {
           } else {
             this.modalService.close('custom-modal-1');
           }
+
+          this.subscription.unsubscribe();
         }
       );
+  }
+  isAuthenticated() {
+    return this.authService.isAuthenticated();
   }
 
 }
