@@ -8,28 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="70bb6818-7bed-4e9c-a331-6187645bb114" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/auth/signin/signin.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/auth/signin/signin.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/auth/signin/signin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/auth/signin/signin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/auth/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/auth/signin/signin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/auth/signup/signup.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/auth/signup/signup.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/auth/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/auth/signup/signup.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/core/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/core/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/modal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/modal/modal.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/modal/modal.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/modal/modal.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/modal/modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/modal/modal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/modal/modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/modal/modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/page-not-found/page-not-found.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/core/page-not-found/page-not-found.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/page-not-found/page-not-found.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/core/page-not-found/page-not-found.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/page-not-found/page-not-found.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/core/page-not-found/page-not-found.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-detail/recipe-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-detail/recipe-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-detail/recipe-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-detail/recipe-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-edit/recipe-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-edit/recipe-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-edit/recipe-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-edit/recipe-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-list/recipe-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-list/recipe-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe-book/src/app/shared/data-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-book/src/app/shared/data-storage.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,10 +63,10 @@
         <counts>
           <entry key="css" value="63" />
           <entry key="editorconfig" value="1" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="4" />
           <entry key="html" value="288" />
           <entry key="json" value="25" />
-          <entry key="ts" value="567" />
+          <entry key="ts" value="568" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -96,8 +74,8 @@
           <entry key="CSS" value="63" />
           <entry key="HTML" value="288" />
           <entry key="JSON" value="22" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="TypeScript" value="567" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="TypeScript" value="568" />
           <entry key="tsconfig" value="3" />
         </counts>
       </usages-collector>
@@ -129,7 +107,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recipe-book/src/app/app-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -137,6 +115,26 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recipe-book/src/app/shared/data-storage.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -195,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pipes-assignment-start/src/app/reverse.pipe.ts" />
         <option value="$PROJECT_DIR$/pipes-start/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/http-start/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/http-start/src/app/app.component.ts" />
@@ -246,6 +243,7 @@
         <option value="$PROJECT_DIR$/recipe-book/src/app/recipes/recipes.module.ts" />
         <option value="$PROJECT_DIR$/recipe-book/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/recipe-book/src/app/core/core.module.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -282,7 +280,6 @@
       <path value="$PROJECT_DIR$/http-start/package.json" />
       <path value="$PROJECT_DIR$/my-project/package.json" />
       <path value="$PROJECT_DIR$/observables-start/package.json" />
-      <path value="$PROJECT_DIR$/optimizations-final/package.json" />
       <path value="$PROJECT_DIR$/pipes-assignment-start/package.json" />
       <path value="$PROJECT_DIR$/pipes-start/package.json" />
       <path value="$PROJECT_DIR$/recipe-book/package.json" />
@@ -318,105 +315,6 @@
               <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
               <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="signin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-detail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-edit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes-start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-angular6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-angular6" type="462c0819:PsiDirectoryNode" />
-              <item name="recipe-book" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping-list" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -506,12 +404,12 @@
       <workItem from="1537863822519" duration="23848000" />
       <workItem from="1537948565730" duration="17282000" />
       <workItem from="1538029095201" duration="16803000" />
-      <workItem from="1538119711194" duration="2767000" />
+      <workItem from="1538119711194" duration="3237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="523433000" />
+    <option name="totallyTimeSpent" value="523903000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,27 +476,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/observables-start/src/app/user/user.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/observables-start/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recipe-book/node_modules/firebase/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="284" column="4" selection-start-line="284" selection-start-column="4" selection-end-line="284" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recipe-book/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -918,6 +795,27 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipe-book/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipe-book/src/app/shared/data-storage.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
