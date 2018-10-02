@@ -11,6 +11,9 @@ import {ModalService} from '../modal/modal.service';
 import {AuthService} from '../auth/auth.service';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ModalComponent} from '../modal/modal.component';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {AuthInterceptor} from '../shared/auth.interceptor';
+import {LoggingInterceptor} from '../shared/logging.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import {ModalComponent} from '../modal/modal.component';
     RecipeService,
     DataStorageService,
     AuthService,
-    ModalService
+    ModalService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true}
   ]
 })
 export class CoreModule {
