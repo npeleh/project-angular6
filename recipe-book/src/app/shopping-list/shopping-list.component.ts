@@ -1,45 +1,30 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Subscription} from 'rxjs/Subscription';
+import {Component, OnInit} from '@angular/core';
+import {Store} from '@ngrx/store';
+import {Observable} from 'rxjs';
 
 import {Ingredient} from '../shared/ingredient.model';
-import {ShoppingListService} from './shopping-list.service';
+import * as fromShoppingList from './store/shopping-list.reducers';
+import * as ShoppingListActions from './store/shopping-list.actions';
 
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css']
 })
-export class ShoppingListComponent implements OnInit, OnDestroy {
-  ingredients: Ingredient[];
-  private subscription: Subscription;
+export class ShoppingListComponent implements OnInit {
+  shoppingListState: Observable<{ingredients: Ingredient[]}>;
 
-  constructor(private shoppingListService: ShoppingListService) {
+  constructor(private store: Store<fromShoppingList.AppState>) {
   }
 
   ngOnInit() {
-    this.ingredients = this.shoppingListService.getIngredients();
-    this.subscription = this.shoppingListService.ingredientsChanged
-      .subscribe(
-        (ingredients: Ingredient[]) => {
-          this.ingredients = ingredients;
-        }
-      );
+    this.shoppingListState = this.store.select('shoppingList');
   }
 
   onEditItem(index: number) {
-    this.shoppingListService.startedEdidting.next(index);
-    this.shoppingListService.resetStyle();
+    this.store.dispatch(new ShoppingListActions.StartEdit(index));
     (<HTMLElement>document.getElementsByClassName('list-group-item')[index]).style.backgroundColor = '#f5f5f5';
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
 }
 
-
-// a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
-//   color: #555;
-//   text-decoration: none;
-//   background-color: #f5f5f5;
-// }
