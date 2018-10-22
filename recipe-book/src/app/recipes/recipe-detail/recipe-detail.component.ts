@@ -1,15 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {Store} from '@ngrx/store';
+import {Observable} from 'rxjs';
+import {take} from 'rxjs/operators';
 
-import {Recipe} from '../recipe.model';
-import {RecipeService} from '../recipe.service';
-import {Ingredient} from '../../shared/ingredient.model';
-import {AuthService} from '../../auth/auth.service';
 import {ModalService} from '../../modal/modal.service';
 import {Subscription} from 'rxjs';
 import * as ShoppingListActions from '../../shopping-list/store/shopping-list.actions';
-import * as fromShoppingList from '../../shopping-list/store/shopping-list.reducers';
+import * as fromRecipe from '../store/recipe.reducers';
+import * as RecipeActions from '../store/recipe.action';
+import * as fromAuth from '../../auth/store/auth.reducers';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -17,27 +17,26 @@ import * as fromShoppingList from '../../shopping-list/store/shopping-list.reduc
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-  recipe: Recipe;
+  recipeState: Observable<fromRecipe.State>;
+  authState: Observable<fromAuth.State>;
   id: number;
-  deleteRecipe: boolean;
   subscription: Subscription;
 
-  constructor(private recipeService: RecipeService,
-              private router: Router,
+  constructor(private router: Router,
               private route: ActivatedRoute,
-              private authService: AuthService,
               private modalService: ModalService,
-              private store: Store<fromShoppingList.AppState>) {
+              private store: Store<fromRecipe.FetureState>) {
   }
 
   ngOnInit() {
+    this.authState = this.store.select('auth');
     this.route.params.subscribe(
       (params: Params) => {
         try {
           this.id = +params['id'];
-          this.recipe = this.recipeService.getRecipe(this.id);
+          this.recipeState = this.store.select('recipes');
         } catch (e) {
-          this.recipe = new Recipe('', '', '', Ingredient[0]);
+          // this.recipeState = new Recipe('', '', '', Ingredient[0]);
           console.log(e);
           this.router.navigate(['../page-not-found']);
         }
@@ -46,16 +45,34 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onAddToShoppingList() {
-    this.store.dispatch(new ShoppingListActions.AddIngredients(this.recipe.ingredients));
+    this.store.select('recipes')
+      .pipe(take(1))
+      .subscribe(
+        (recipeState: fromRecipe.State) => {
+          this.store.dispatch(new ShoppingListActions.AddIngredients
+            (recipeState.recipes[this.id].ingredients)
+          );
+        }
+      );
   }
 
   onEditRecipe() {
-    if (!this.authService.isAuthenticated()) {
-      this.modalService.error = 'Sign up please';
-      this.modalService.show = false;
-      this.modalService.open('custom-modal-1');
-    }
     this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
+  }
+
+  onDrop() {
+    this.authState
+      .pipe(take(1))
+      .subscribe(
+      (authState: fromAuth.State) => {
+        if (!authState.authenticated) {
+          this.modalService.show = false;
+          this.modalService.error = 'Signin, please!';
+          this.modalService.open('custom-modal-1');
+        }
+        return authState.authenticated;
+      }
+    );
   }
 
   onDeleteRecipe() {
@@ -64,22 +81,19 @@ export class RecipeDetailComponent implements OnInit {
     this.modalService.open('custom-modal-1');
     this.subscription = this.modalService.deleteObserver
       .subscribe(
-        (del: boolean) => {
+        (del: string) => {
           console.log(del);
-          if (del) {
-            this.recipeService.deleteRecipe(this.id);
+          if (del === 'yes') {
+            this.store.dispatch(new RecipeActions.DeleteRecipe(this.id));
             this.router.navigate(['/recipes']);
             this.modalService.close('custom-modal-1');
-          } else {
+          } else if (del === 'no') {
             this.modalService.close('custom-modal-1');
           }
 
           this.subscription.unsubscribe();
         }
       );
-  }
-  isAuthenticated() {
-    return this.authService.isAuthenticated();
   }
 
 }

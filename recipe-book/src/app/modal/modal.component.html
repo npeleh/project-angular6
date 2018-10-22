@@ -1,12 +1,13 @@
 <div class="jw-modal">
   <div class="jw-modal-body">
+    <div class="text-right" *ngIf="showElem"><button class="btn btn-danger" (click)="onDeleted('close')">X</button></div>
     <h1>{{errorMassage}}</h1>
     <div *ngIf="!showElem">
       <button class="btn btn-danger" (click)="closeModal('custom-modal-1');">Close</button>
     </div>
     <div *ngIf="showElem">
-      <button class="btn btn-success" (click)="onDeleted(true)">Yes</button>
-      <button class="btn btn-danger" (click)="onDeleted(false)">No</button>
+      <button class="btn btn-success" (click)="onDeleted('yes')">Yes</button>
+      <button class="btn btn-danger" (click)="onDeleted('no')">No</button>
     </div>
   </div>
 </div>

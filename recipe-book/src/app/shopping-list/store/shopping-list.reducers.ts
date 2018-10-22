@@ -1,14 +1,11 @@
 import * as ShoppingListActions from './shopping-list.actions';
 import {Ingredient} from '../../shared/ingredient.model';
 
-export interface AppState {
-  spoppingList: State;
-}
-
 export interface State {
   ingredients: Ingredient[];
   editedIngredient: Ingredient;
   editedIngredientIndex: number;
+  selectedIngredients: number[];
 }
 
 const initialState: State = {
@@ -17,7 +14,8 @@ const initialState: State = {
     new Ingredient('Cherry', 20)
   ],
   editedIngredient: null,
-  editedIngredientIndex: -1
+  editedIngredientIndex: -1,
+  selectedIngredients: []
 };
 
 export function shoppingListReducer(state = initialState, action: ShoppingListActions.ShoppingListActions) {
@@ -46,25 +44,37 @@ export function shoppingListReducer(state = initialState, action: ShoppingListAc
         ...state,
         ingredients: ingredients,
         editedIngredient: null,
-        editedIngredientIndex: -1
+        editedIngredientIndex: -1,
+        selectedIngredients: []
       };
+
 
     case ShoppingListActions.DELETE_INGREDIENT:
       const oldIngredients = [...state.ingredients];
-      oldIngredients.splice(state.editedIngredientIndex, 1);
+      const selectedIngredients = [...state.selectedIngredients];
+      for (let i = 0; i < selectedIngredients.length; i++) {
+        oldIngredients.splice(state.selectedIngredients[i], 1);
+      }
+
+      console.log(selectedIngredients);
       return {
         ...state,
         ingredients: oldIngredients,
         editedIngredient: null,
-        editedIngredientIndex: -1
+        editedIngredientIndex: -1,
+        selectedIngredients: []
       };
 
     case ShoppingListActions.START_EDIT:
       const editedIngredient = {...state.ingredients[action.payload]};
+      const selectedIngredient = state.selectedIngredients.concat(action.payload);
+
+      console.log(selectedIngredient);
       return {
         ...state,
         editedIngredient: editedIngredient,
-        editedIngredientIndex: action.payload
+        editedIngredientIndex: action.payload,
+        selectedIngredients: selectedIngredient
       };
 
     case ShoppingListActions.STOP_EDIT:

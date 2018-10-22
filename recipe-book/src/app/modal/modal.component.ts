@@ -19,8 +19,8 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.element = el.nativeElement;
   }
 
-  onDeleted(bool) {
-    this.modalService.deleteObserver.next(bool);
+  onDeleted(value) {
+    this.modalService.deleteObserver.next(value);
   }
 
   closeModal(id: string) {

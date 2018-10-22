@@ -1,16 +1,17 @@
 import {
   Component,
+  Input,
   OnDestroy,
   OnInit,
   ViewChild
 } from '@angular/core';
 import {NgForm} from '@angular/forms';
-import {Subscription} from 'rxjs/Subscription';
+import {Subscription} from 'rxjs';
 import {Store} from '@ngrx/store';
 
 import {Ingredient} from '../../shared/ingredient.model';
 import * as ShoppingListActions from '../store/shopping-list.actions';
-import * as fromShoppingList from '../store/shopping-list.reducers';
+import * as fromApp from '../../store/app.reducers';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -22,6 +23,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   editMode = false;
   editedItem: Ingredient;
+  @Input() item: number[];
 
   focus = {
     name: {
@@ -39,7 +41,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   };
 
 
-  constructor(private store: Store<fromShoppingList.AppState>) {
+  constructor(private store: Store<fromApp.AppState>) {
   }
 
   ngOnInit() {
@@ -78,6 +80,10 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   }
 
   onDelete() {
+    // for (let i; i < this.item.length; i++) {
+    //   oldIngredients.splice(deleted[i], 1);
+    //   console.log(deleted[i]);
+    // }
     this.store.dispatch(new ShoppingListActions.DeleteIngredient());
     this.onClear();
   }

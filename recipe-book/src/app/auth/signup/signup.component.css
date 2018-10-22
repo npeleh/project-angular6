@@ -2,3 +2,6 @@ p {
   color: red;
   height: 10px;
 }
+button {
+  width: 75px;
+}
