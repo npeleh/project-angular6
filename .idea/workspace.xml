@@ -228,8 +228,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recipe-book/webpack.server.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="98">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -341,6 +341,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/animations-start/node_modules" />
     <handled-path value="$PROJECT_DIR$/directives-start/node_modules" />
     <handled-path value="$PROJECT_DIR$/forms-reactive-assignment-start/node_modules" />
     <handled-path value="$PROJECT_DIR$/forms-reactive-start/node_modules" />
@@ -359,6 +360,7 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/animations-start/package.json" />
       <path value="$PROJECT_DIR$/directives-start/package.json" />
       <path value="$PROJECT_DIR$/forms-reactive-assignment-start/package.json" />
       <path value="$PROJECT_DIR$/forms-reactive-start/package.json" />
@@ -432,7 +434,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="dd&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/project by Mykhailo/liftr-score-table.git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/animations-start" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -525,12 +527,12 @@
       <workItem from="1539850897613" duration="11197000" />
       <workItem from="1539934548411" duration="10457000" />
       <workItem from="1540196542931" duration="15350000" />
-      <workItem from="1540280550600" duration="3568000" />
+      <workItem from="1540280550600" duration="4986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="709967000" />
+    <option name="totallyTimeSpent" value="711385000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,7 +559,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.46045503" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.7074756" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -945,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recipe-book/webpack.server.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="98">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
