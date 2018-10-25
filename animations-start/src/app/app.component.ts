@@ -134,7 +134,9 @@ export class AppComponent {
   }
 
   onAdd(item) {
-    this.list.push(item);
+    if (item !== '') {
+      this.list.push(item);
+    }
   }
 
   onDelete(item) {
